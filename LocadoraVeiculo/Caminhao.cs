@@ -8,7 +8,7 @@ namespace LocadoraVeiculo
 {
     class Caminhao : Veiculo
     {
-        public Caminhao(string modelo, string marca, int ano, double aluguelDiario, int dias) : base(modelo, marca, ano, aluguelDiario, dias)
+        public Caminhao(string placa, string modelo, string marca, int ano, double aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
         {
         }
 
@@ -16,9 +16,5 @@ namespace LocadoraVeiculo
         {
             return (aluguelDiario * dias) * 1.20;
         }
-
-        public void printar(Caminhao caminhao)
-        {
-                Console.WriteLine($"Marca: {caminhao.marca} | Modelo: {_modelo} | Ano: {_ano}, Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Alguel: {CalcularAluguel()}");
-        }
+    }
 }

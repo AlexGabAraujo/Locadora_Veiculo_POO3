@@ -9,29 +9,55 @@ namespace LocadoraVeiculo
 {
     class Veiculo : IVeiculo
     {
-        private string _modelo;
-        private string _marca;
-        private int _ano;
-        private double _aluguelDiario;
-        private int _dias;
+        protected string _placa;
+        protected string _modelo;
+        protected string _marca;
+        protected int _ano;
+        protected double _aluguelDiario;
+        protected int _dias;
+        protected bool _alugado;
 
-        public Veiculo(string modelo, string marca, int ano, double aluguelDiario, int dias)
+        public Veiculo(string placa, string modelo, string marca, int ano, double aluguelDiario)
         {
+            _placa = placa;
             _modelo = modelo;
             _marca = marca;
             _ano = ano;
             _aluguelDiario = aluguelDiario;
-            _dias = dias;
         }
 
-        public virtual double CalcularAluguel(double aluguelDiario ,int dias)
+        public string Placa
+        {
+            get { return _placa; }
+            set { _placa = value; }
+        }
+        public bool Alugado
+        {
+            get { return _alugado; }
+            set { _alugado = value; }
+        }
+        public int Dias
+        {
+            get { return _dias; }
+            set { _dias = value; }
+        }
+
+        public virtual double CalcularAluguel(double aluguelDiario, int dias)
         {
             throw new NotImplementedException();
         }
 
-        public void printar(Veiculo veiculo) {
+        public void printar()
         {
-            
+            string tipo;
+            if (this is Moto)
+                tipo = "Moto";
+            else if (this is Carro)
+                tipo = "Carro";
+            else
+                tipo = "Caminhão";
+
+            Console.WriteLine($"\nTipo: {tipo} | Marca: {_marca} | Modelo: {_modelo} | Ano: {_ano} | Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Aluguel: {CalcularAluguel(_aluguelDiario, _dias)} | Alugado: {_alugado}");
         }
     }
 }

@@ -8,7 +8,7 @@ namespace LocadoraVeiculo
 {
     class Moto : Veiculo
     {
-        public Moto(string modelo, string marca, int ano, double aluguelDiario) : base(modelo, marca, ano, aluguelDiario)
+        public Moto(string placa, string modelo, string marca, int ano, double aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
         {
         }
 
