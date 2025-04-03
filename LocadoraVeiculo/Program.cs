@@ -9,7 +9,6 @@ namespace LocadoraVeiculo
         {
             List<Veiculo> veiculos = new List<Veiculo>();
 
-
             try
             {
                 MostrarMenu(veiculos);
@@ -125,7 +124,6 @@ namespace LocadoraVeiculo
 
             Console.WriteLine("\nVeículo Adicionado com Sucesso");
         }
-
 
         private static void VisualizarTodosVeiculos(List<Veiculo> veiculos)
         {

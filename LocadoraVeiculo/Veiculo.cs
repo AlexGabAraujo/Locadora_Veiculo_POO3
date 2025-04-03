@@ -56,8 +56,8 @@ namespace LocadoraVeiculo
                 tipo = "Carro";
             else
                 tipo = "Caminhão";
-
-            Console.WriteLine($"\nTipo: {tipo} | Marca: {_marca} | Modelo: {_modelo} | Ano: {_ano} | Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Aluguel: {CalcularAluguel(_aluguelDiario, _dias)} | Alugado: {_alugado}");
+            
+            Console.WriteLine($"\nTipo: {tipo} | Placa: {_placa} Marca: {_marca} | Modelo: {_modelo} | Ano: {_ano} | Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Aluguel: {CalcularAluguel(_aluguelDiario, _dias)} | Alugado: {_alugado}");
         }
     }
 }
