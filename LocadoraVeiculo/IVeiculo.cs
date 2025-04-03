@@ -8,6 +8,6 @@ namespace LocadoraVeiculo
 {
     interface IVeiculo
     {
-        double CalcularAluguel(double aluguelDiario, int dias);
+        decimal CalcularAluguel(decimal aluguelDiario, int dias);
     }
 }

@@ -10,11 +10,11 @@ namespace LocadoraVeiculo
 {
     class Carro : Veiculo
     {
-        public Carro(string placa, string modelo, string marca, int ano, double aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
+        public Carro(string placa, string modelo, string marca, int ano, decimal aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
         {
         }
 
-        public override double CalcularAluguel(double aluguelDiario, int dias)
+        public override decimal CalcularAluguel(decimal aluguelDiario, int dias)
         {
             return aluguelDiario * dias;
         }

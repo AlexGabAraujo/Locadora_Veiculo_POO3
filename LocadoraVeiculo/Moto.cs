@@ -8,13 +8,13 @@ namespace LocadoraVeiculo
 {
     class Moto : Veiculo
     {
-        public Moto(string placa, string modelo, string marca, int ano, double aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
+        public Moto(string placa, string modelo, string marca, int ano, decimal aluguelDiario) : base(placa, modelo, marca, ano, aluguelDiario)
         {
         }
 
-        public override double CalcularAluguel(double aluguelDiario,int dias)
+        public override decimal CalcularAluguel(decimal aluguelDiario,int dias)
         {
-            return (aluguelDiario * dias) * 0.90;
+            return (aluguelDiario * dias) * 0.90m;
         }
     }
 }

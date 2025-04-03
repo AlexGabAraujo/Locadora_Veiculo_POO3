@@ -98,7 +98,7 @@ namespace LocadoraVeiculo
             Console.Write("Ano: ");
             int ano = int.Parse(Console.ReadLine());
             Console.Write("Valor de Aluguel Diário: ");
-            double aluguelDiario = double.Parse(Console.ReadLine());
+            decimal aluguelDiario = decimal.Parse(Console.ReadLine());
             Console.Write("Tipo do Veículo(1- Moto, 2- Carro, 3- Caminhão): ");
             int tipo = int.Parse(Console.ReadLine());
 
@@ -159,7 +159,7 @@ namespace LocadoraVeiculo
         {
             if (veiculos.Count == 0)
             {
-                Console.WriteLine("Não há Véiculos para serem alugados.");
+                Console.WriteLine("Não há Veículos para serem alugados.");
                 return;
             }
 

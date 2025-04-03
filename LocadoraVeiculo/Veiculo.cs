@@ -13,11 +13,11 @@ namespace LocadoraVeiculo
         protected string _modelo;
         protected string _marca;
         protected int _ano;
-        protected double _aluguelDiario;
+        protected decimal _aluguelDiario;
         protected int _dias;
         protected bool _alugado;
 
-        public Veiculo(string placa, string modelo, string marca, int ano, double aluguelDiario)
+        public Veiculo(string placa, string modelo, string marca, int ano, decimal aluguelDiario)
         {
             _placa = placa;
             _modelo = modelo;
@@ -42,7 +42,7 @@ namespace LocadoraVeiculo
             set { _dias = value; }
         }
 
-        public virtual double CalcularAluguel(double aluguelDiario, int dias)
+        public virtual decimal CalcularAluguel(decimal aluguelDiario, int dias)
         {
             throw new NotImplementedException();
         }
@@ -57,7 +57,7 @@ namespace LocadoraVeiculo
             else
                 tipo = "Caminhão";
             
-            Console.WriteLine($"\nTipo: {tipo} | Placa: {_placa} Marca: {_marca} | Modelo: {_modelo} | Ano: {_ano} | Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Aluguel: {CalcularAluguel(_aluguelDiario, _dias)} | Alugado: {_alugado}");
+            Console.WriteLine($"\nTipo: {tipo} | Placa: {_placa} | Marca: {_marca} | Modelo: {_modelo} | Ano: {_ano} | Valor Diário Aluguel: {_aluguelDiario} | Dias Alugado: {_dias} | Valor Total do Aluguel: {CalcularAluguel(_aluguelDiario, _dias)} | Alugado: {_alugado}");
         }
     }
 }
