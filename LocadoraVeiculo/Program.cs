@@ -170,7 +170,7 @@ namespace LocadoraVeiculo
             Veiculo veiculo = veiculos.Find(v => v.Placa == placa);
             if (veiculo != null && veiculo.Alugado != true)
             {
-                Console.Write("Quantos Dias Você Deseja Alugar? : ");
+                Console.Write("Quantos Dias Você Deseja Alugar: ");
                 int dias = int.Parse(Console.ReadLine());
                 veiculo.Alugado = true;
                 veiculo.Dias = dias;
